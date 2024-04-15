@@ -2,7 +2,7 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
-    "sourceType": "module",
+    "sourceType": "module"
   },
   "settings": {
     "react": {
@@ -10,18 +10,18 @@
     }
   },
   "plugins": [
+    "@typescript-eslint",
     "prettier",
-    "react",
-    "@typescript-eslint"
+    "react"
   ],
   "extends": [
-      "eslint:recommended",
-      "plugin:prettier/recommended",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "rules": {
-    // prettier
     "prettier/prettier": ["error"],
     // react
     "react/jsx-uses-react": "error",
@@ -39,13 +39,13 @@
     "react/destructuring-assignment": [
       "error",
       "always",
-      { "destructureInSignature": "always" },
+      { "destructureInSignature": "always" }
     ],
     "react/jsx-no-leaked-render": ["error", { "validStrategies": ["ternary"] }],
     "react/jsx-max-depth": ["error", { "max": 5 }],
     "react/function-component-definition": [
       "warn",
-      { "namedComponents": "arrow-function" },
+      { "namedComponents": "arrow-function" }
     ],
     "react/jsx-key": [
       "error",
@@ -63,6 +63,6 @@
     "react/jsx-sort-props": "warn",
     "react/react-in-jsx-scope": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/prop-types": "off",
-  },
+    "react/prop-types": "off"
+  }
 }
